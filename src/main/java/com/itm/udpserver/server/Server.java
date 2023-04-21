@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.util.Arrays;
 
 @Component
 public class Server extends Thread {
@@ -43,12 +42,10 @@ public class Server extends Thread {
 
             socket.receive(request);
             byte[] data = request.getData();
-            System.out.println("data = " + Arrays.toString(data));
             BasePacket packet = PacketService.enrichEntity(data);
             repository.update(packet);
 
             System.out.println(packet);
-
         }
     }
 

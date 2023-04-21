@@ -13,10 +13,10 @@ public class PacketService {
         short coordY = (short) getShortValueFromTwoBytes(new byte[]{data[4], data[5]});
         double coordAzimuth = data[6] * 1.0 / 256 * 360;
         int status = getShortValueFromTwoBytes(new byte[]{data[7], data[8]});
-        short material = data[9];
-        int location = getShortValueFromTwoBytes(new byte[]{data[10], data[11]});        // TODO в случае чего вернуть в Short
+        short material = (short) ((byte) (data[9] - 128) + 128);
+        int location = getShortValueFromTwoBytes(new byte[]{data[10], data[11]});
         int holeName = getShortValueFromTwoBytes(new byte[]{data[12], data[13]});
-        short gradename = data[14];
+        short gradename = (short) ((byte) (data[14] - 128) + 128);
 
         basePacket.setEquipId(equipName);
         basePacket.setCoordX(coordX);
@@ -36,19 +36,5 @@ public class PacketService {
     }
 
 
-
-    public static byte[] shortToBytes(int s) {
-        byte[] result = new byte[2];
-        result[0] = (byte) (s >> 8);
-        result[1] = (byte) (s & 0xFF);
-        return result;
-    }
-
-    public static String[] shortToHexBytes(int a) {
-        String[] result = new String[2];
-        result[0] = Integer.toHexString(a >> 8);
-        result[1] = Integer.toHexString(a & 0xFF);
-        return result;
-    }
 
 }
