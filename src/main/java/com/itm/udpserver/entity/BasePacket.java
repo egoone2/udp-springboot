@@ -9,21 +9,21 @@ public class BasePacket {
 
     private Short equipId;
 
-    private Short coordX;
+    private Integer coordX;
 
-    private Short coordY;
+    private Integer coordY;
 
     private Double coordAzimuth;
 
     private Integer status;
 
-    private Short material;      // оно же deep
+    private Short material;      //  deep
 
     private Integer location;
 
     private Integer holeName;
 
-    private Short gradename;     // оно же condition_id/assign_lu
+    private Short gradename;     // condition_id/assign_lu
 
     public BasePacket() {
 

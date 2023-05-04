@@ -14,6 +14,4 @@ public class EquipRepository {
     public void update(BasePacket packet) {
         equipmentMap.put(packet.getEquipId(), packet);
     }
-
-
 }

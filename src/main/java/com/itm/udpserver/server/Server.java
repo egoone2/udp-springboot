@@ -1,51 +1,54 @@
 package com.itm.udpserver.server;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itm.udpserver.entity.BasePacket;
-import com.itm.udpserver.repository.EquipRepository;
 import com.itm.udpserver.service.PacketService;
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.net.InetSocketAddress;
+import java.net.SocketAddress;
 
 @Component
-public class Server extends Thread {
+@Slf4j
+@RequiredArgsConstructor
+public class Server {
+
     @Value("${udp.port}")
     private Integer port;
     @Value("${buffer.length}")
     private Integer bufferLength;
+    @Value("${hostname}")
+    private String hostname;
 
-    private final EquipRepository repository;
     private DatagramSocket socket;
     private DatagramPacket request;
-
-    @Autowired
-    public Server(EquipRepository repository) {
-        this.repository = repository;
-    }
+    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final PacketService packetService;
 
 
     @SneakyThrows
-    @Override
-    public void run() {
-        System.out.println("Server started");
-
+    public void start() {
+        log.info("Server started");
         byte[] buffer = new byte[bufferLength];
-        socket = new DatagramSocket(port);
+        SocketAddress address = new InetSocketAddress(hostname, port);
+        socket = new DatagramSocket(address);
         request = new DatagramPacket(buffer, buffer.length);
 
         while (true) {
 
             socket.receive(request);
             byte[] data = request.getData();
-            BasePacket packet = PacketService.enrichEntity(data);
-            repository.update(packet);
-
-            System.out.println(packet);
+            BasePacket packet = packetService.enrichEntity(data);
+            packetService.update(packet);
+            String jsonPacket = objectMapper.writeValueAsString(packet);
+            log.info(jsonPacket);
         }
     }
 

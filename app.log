@@ -1,0 +1,15 @@
+2023-05-04 11:56:33,642 INFO com.itm.udpserver.UdpServerApplication [main] Starting UdpServerApplication using Java 17.0.5 with PID 34440 (C:\Users\whale\IdeaProjects\udp-server\target\classes started by whale in C:\Users\whale\IdeaProjects\udp-server)
+2023-05-04 11:56:33,656 INFO com.itm.udpserver.UdpServerApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-04 11:56:34,903 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-05-04 11:56:34,925 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-05-04 11:56:35,779 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-04 11:56:35,794 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-05-04 11:56:35,795 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-04 11:56:35,941 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-04 11:56:35,942 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2158 ms
+2023-05-04 11:56:36,439 INFO com.itm.udpserver.server.Server [main] Server started
+2023-05-04 11:57:00,768 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
+2023-05-04 11:57:19,593 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
+2023-05-04 11:57:20,082 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
+2023-05-04 11:57:20,887 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
+2023-05-04 11:57:24,468 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
