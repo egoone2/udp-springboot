@@ -13,3 +13,26 @@
 2023-05-04 11:57:20,082 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
 2023-05-04 11:57:20,887 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
 2023-05-04 11:57:24,468 INFO com.itm.udpserver.server.Server [main] {"equipId":29047,"coordX":75701,"coordY":19297,"coordAzimuth":161.71875,"status":30828,"material":107,"location":28258,"holeName":28019,"gradename":44}
+2023-05-05T01:33:13.371+07:00  INFO 17300 --- [main] com.itm.udpserver.UdpServerApplication   : Starting UdpServerApplication using Java 20.0.1 with PID 17300 (C:\YD\ITMiningYD\GogsGit\titanlis\udp-springboot\target\classes started by titanlis in C:\YD\ITMiningYD\GogsGit\titanlis\udp-springboot)
+2023-05-05T01:33:13.374+07:00  INFO 17300 --- [main] com.itm.udpserver.UdpServerApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-05-05T01:33:14.136+07:00  INFO 17300 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-05-05T01:33:14.147+07:00  INFO 17300 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-05-05T01:33:14.573+07:00  INFO 17300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2601 (http)
+2023-05-05T01:33:14.583+07:00  INFO 17300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-05T01:33:14.583+07:00  INFO 17300 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-05T01:33:14.667+07:00  INFO 17300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-05T01:33:14.668+07:00  INFO 17300 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1236 ms
+2023-05-05T01:33:14.729+07:00  INFO 17300 --- [Thread-1] com.itm.udpserver.server.Server          : Server started
+2023-05-05T01:33:15.328+07:00  INFO 17300 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-05-05T01:33:15.329+07:00  INFO 17300 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2023-05-05T01:33:15.329+07:00  INFO 17300 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2023-05-05T01:33:15.348+07:00  INFO 17300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2601 (http) with context path ''
+2023-05-05T01:33:15.357+07:00  INFO 17300 --- [main] com.itm.udpserver.UdpServerApplication   : Started UdpServerApplication in 2.596 seconds (process running for 3.752)
+2023-05-05T01:33:31.609+07:00  INFO 17300 --- [Thread-1] com.itm.udpserver.server.Server          : {"equipId":257,"coordX":49989,"coordY":-11011,"coordAzimuth":21.09375,"status":65535,"material":26,"location":257,"holeName":258,"gradename":16}
+2023-05-05T01:33:48.495+07:00  INFO 17300 --- [http-nio-2601-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-05T01:33:48.496+07:00  INFO 17300 --- [http-nio-2601-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-05T01:33:48.497+07:00  INFO 17300 --- [http-nio-2601-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-05T01:33:48.522+07:00  INFO 17300 --- [http-nio-2601-exec-1] c.i.udpserver.controller.MainController  : Exit command...
+2023-05-05T01:33:55.819+07:00  INFO 17300 --- [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-05-05T01:33:55.819+07:00  INFO 17300 --- [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 0 subscriber(s).
+2023-05-05T01:33:55.820+07:00  INFO 17300 --- [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
